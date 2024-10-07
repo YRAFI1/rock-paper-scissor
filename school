@@ -1,0 +1,39 @@
+import random
+
+def playGame():
+    print("Choose:")
+    print("1: Rock")
+    print("2: Scissors")
+    print("3: Paper")
+        
+    user_choice = int(input("Enter your choice (1-3): "))  # Correctly indented
+
+    
+    computer_choice = random.randint(1,3)
+    
+    # Display
+    if computer_choice == 1:
+        print("Computer choose: Rock") 
+    elif computer_choice == 2:
+        print("Computer choose: scissor")
+    else:
+        print ("Computer choose: Paper")
+       
+    if user_choice == computer_choice:   
+        print("Its a tie!!")
+    elif (user_choice == 1 and Computer_choice == 2) or \
+         (user_choice == 2 and computer_choice == 3) or \
+         (user_choice == 3 and computer_choice == 1): 
+        print("You Win!!") 
+    elif (user_choice == 1 and Computer_choice == 3) or \
+         (user_choice == 2 and computer_choice == 1) or \
+         (user_choice == 3 and computer_choice == 2): 
+        print("Computer Wins!!")
+    else:
+        print("Invalid choce! Please enter a number between 1 and 3.")    
+        
+    
+
+# DO NOT CHANGE
+if __name__ == "__main__":
+    playGame()
